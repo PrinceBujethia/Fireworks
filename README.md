@@ -44,8 +44,6 @@ Built from scratch to showcase clean OOP design, mathematically-driven visuals, 
 fireworks/
 ├─ src/
 │  ├─ main.cpp          # entry point and game loop
-│  └─ particle.hpp/cpp  # Particle class for physics and rendering
-├─ CMakeLists.txt       # optional CMake build config
 └─ README.md
 ```
 
@@ -99,8 +97,7 @@ cmake --build .
 | 1.   | Particle Class | constructor sets position, velocity, life, baseColor|
 | 2.   | Physics Update | `velocity.y += GRAVITY * dt; position += velocity * dt;` |
 | 3.   | Trail Capture  | push current position, trim to MAX_TRAIL_LENGTH    |
-| 4.   | Colour Transition | if lifeRatio>0.5 interpolate to red, else fade alpha |
-| 5.   | Patterns       | Explosion, spiral, fountain use trig for vectors   |
+| 4.   | Patterns       | Explosion, spiral, fountain use trig for vectors   |
 
 ---
 
@@ -115,8 +112,6 @@ cmake --build .
 
 🗺️ **Roadmap**
 
-- Starfield background with twinkling effect
-- Vertical gradient night sky
 - Sound effects (explosion crackle, launch whistle)
 - Configurable JSON-based firework presets
 - GPU sprite-based particles (performance boost)
