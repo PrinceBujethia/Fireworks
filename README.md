@@ -1,7 +1,7 @@
 
 🎆 **Raylib Particle Fireworks**
 
-![C++](https://img.shields.io/badge/C%2B%2B-11%2B-blue?style=for-the-badge) ![raylib](https://img.shields.io/badge/raylib-4.x-black?style=for-the-badge) ![platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey?style=for-the-badge) ![license](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
+![C++](https://img.shields.io/badge/C%2B%2B-11%2B-blue?style=for-the-badge) ![raylib](https://img.shields.io/badge/raylib-4.x-black?style=for-the-badge) ![platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey?style=for-the-badge)
 
 A real-time fireworks simulator written in modern C++ with Raylib.
 Built from scratch to showcase clean OOP design, mathematically-driven visuals, and robust engineering practices valued by professionals and recruiters.
