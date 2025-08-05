@@ -1,5 +1,5 @@
 
-🎆 **Raylib Particle Fireworks**
+**Raylib Particle Fireworks**
 
 ![C++](https://img.shields.io/badge/C%2B%2B-11%2B-blue?style=for-the-badge) ![raylib](https://img.shields.io/badge/raylib-4.x-black?style=for-the-badge) ![platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey?style=for-the-badge)
 
@@ -8,7 +8,7 @@ Built from scratch to showcase clean OOP design, mathematically-driven visuals, 
 
 ---
 
-✨ **Features**
+**Features**
 
 **Architecture:**
 - Class-based (`Particle`) encapsulating physics, rendering, and life-cycle
@@ -38,7 +38,7 @@ Built from scratch to showcase clean OOP design, mathematically-driven visuals, 
 
 ---
 
-🏗️ **Project Structure**
+**Project Structure**
 
 ```
 fireworks/
@@ -49,7 +49,7 @@ fireworks/
 
 ---
 
-🔧 **Build & Run**
+**Build & Run**
 
 **Step 1: Install Raylib**
 
@@ -90,7 +90,7 @@ cmake --build .
 
 ---
 
-🔍 **Code Highlights**
+**Code Highlights**
 
 | Step | Concept         | Example Code/Logic                                 |
 |------|----------------|----------------------------------------------------|
@@ -101,7 +101,7 @@ cmake --build .
 
 ---
 
-🎯 **Why This Project Matters**
+**Why This Project Matters**
 
 - Game-ready techniques: Demonstrates core game engine and graphics concepts
 - Math competence: Shows trigonometry, interpolation, and delta-time animation
@@ -110,7 +110,7 @@ cmake --build .
 
 ---
 
-🗺️ **Roadmap**
+**Roadmap**
 
 - Sound effects (explosion crackle, launch whistle)
 - Configurable JSON-based firework presets
@@ -119,7 +119,7 @@ cmake --build .
 
 ---
 
-🤝 **Contributing**
+**Contributing**
 
 Pull requests are welcome—especially for new explosion patterns, performance tips, or bug fixes.
 Feel free to open issues for suggestions!
