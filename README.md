@@ -1,29 +1,130 @@
-# Raylib-CPP-Starter-Template-for-VSCODE-V2
-Raylib C++ Starter Template for Visual Studio Code on Windows.
-This demo project contains a bouncing ball raylib example program.
-It works with raylib version 5.0. Tested on both Windows 10 and Windows 11.
 
-# How to use this template
-1. Double click on the main.code-workspace file. This will open the template in VS Code.
-2. From the Explorer Window of VS Code navigate to the src folder and double click on the main.cpp file.
-3. Press F5 on the keyboard to compile and run the program.
+🎆 **Raylib Particle Fireworks**
 
-# What's changed
-The template now uses folders for better organizion of the files. So, all the source code now lives in the src folder.
+![C++](https://img.shields.io/badge/C%2B%2B-11%2B-blue?style=for-the-badge) ![raylib](https://img.shields.io/badge/raylib-4.x-black?style=for-the-badge) ![platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey?style=for-the-badge) ![license](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
-# Video Tutorial
+A real-time fireworks simulator written in modern C++ with Raylib.
+Built from scratch to showcase clean OOP design, mathematically-driven visuals, and robust engineering practices valued by professionals and recruiters.
 
-<p align="center">
-  <img src="preview.jpg" alt="" width="800">
-</p>
+---
 
-<p align="center">
-🎥 <a href="https://www.youtube.com/watch?v=PaAcVk5jUd8">Video Tutorial on YouTube</a>
-</p>
+✨ **Features**
 
-<br>
-<br>
-<p align="center">
-| 📺 <a href="https://www.youtube.com/channel/UC3ivOTE5EgpmF2DHLBmWIWg">My YouTube Channel</a>
-| 🌍 <a href="http://www.programmingwithnick.com">My Website</a> | <br>
-</p>
+**Architecture:**
+- Class-based (`Particle`) encapsulating physics, rendering, and life-cycle
+- Self-contained update/render loop with delta-time integration
+- Efficient memory management (particles and trails)
+
+**Visuals:**
+- Radial explosions, spirals, and fountains
+- Particle trails with alpha fading
+- Dynamic color transitions (base → red → transparent)
+- Size scaling over lifetime
+
+**Math & Physics:**
+- Gravity and velocity updates each frame
+- Trigonometric angle→vector conversion
+- Linear interpolation for color and size
+
+**Performance:**
+- Trail length limit
+- Backwards vector erasure for removal
+- No heap allocation inside the frame loop
+
+**Controls:**
+- **Left Click:** Radial explosion at mouse
+- **F key:** Fountain effect
+- **S key:** Spiral pattern
+
+---
+
+🏗️ **Project Structure**
+
+```
+fireworks/
+├─ src/
+│  ├─ main.cpp          # entry point and game loop
+│  └─ particle.hpp/cpp  # Particle class for physics and rendering
+├─ CMakeLists.txt       # optional CMake build config
+└─ README.md
+```
+
+---
+
+🔧 **Build & Run**
+
+**Step 1: Install Raylib**
+
+```bash
+# Debian / Ubuntu
+sudo apt install libraylib-dev
+
+# macOS (Homebrew)
+brew install raylib
+
+# Windows (MSYS2)
+pacman -S mingw-w64-x86_64-raylib
+```
+
+**Step 2: Compile**
+
+```bash
+# Linux / macOS
+g++ -std=c++11 src/*.cpp -lraylib -lGL -lm -lpthread -ldl -lrt -lX11 -o fireworks
+
+# Windows (MinGW)
+g++ -std=c++11 src/*.cpp -lraylib -lopengl32 -lgdi32 -lwinmm -o fireworks.exe
+```
+
+Or, with CMake:
+
+```bash
+mkdir build && cd build
+cmake ..
+cmake --build .
+```
+
+**Step 3: Run**
+
+```bash
+./fireworks
+```
+
+---
+
+🔍 **Code Highlights**
+
+| Step | Concept         | Example Code/Logic                                 |
+|------|----------------|----------------------------------------------------|
+| 1.   | Particle Class | constructor sets position, velocity, life, baseColor|
+| 2.   | Physics Update | `velocity.y += GRAVITY * dt; position += velocity * dt;` |
+| 3.   | Trail Capture  | push current position, trim to MAX_TRAIL_LENGTH    |
+| 4.   | Colour Transition | if lifeRatio>0.5 interpolate to red, else fade alpha |
+| 5.   | Patterns       | Explosion, spiral, fountain use trig for vectors   |
+
+---
+
+🎯 **Why This Project Matters**
+
+- Game-ready techniques: Demonstrates core game engine and graphics concepts
+- Math competence: Shows trigonometry, interpolation, and delta-time animation
+- Clean engineering: Readable, modular, and efficient (SOLID-inspired)
+- Recruiter appeal: Focus on modern C++ design, graphics, real-time logic, and code quality
+
+---
+
+🗺️ **Roadmap**
+
+- Starfield background with twinkling effect
+- Vertical gradient night sky
+- Sound effects (explosion crackle, launch whistle)
+- Configurable JSON-based firework presets
+- GPU sprite-based particles (performance boost)
+- 3D camera & depth-sorted particles
+
+---
+
+🤝 **Contributing**
+
+Pull requests are welcome—especially for new explosion patterns, performance tips, or bug fixes.
+Feel free to open issues for suggestions!
